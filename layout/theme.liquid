@@ -2,6 +2,7 @@
 
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+ {%- render 'ecom_header' -%}
     <meta name="google-site-verification" content="APNWMTUcr3IQSDej2vpTaFi153VU4R1Dwr9qp_yHwiA">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -220,6 +221,10 @@
       {% section 'header' %}
 
       <main id="main" role="main">
+        {% comment %} {% include 'breadcrumbs' %} {% endcomment %}
+       {% comment %}  {%- if settings.show_breadcrumb_nav -%} {% endcomment %}
+          {% render "breadcrumbs.liquid" %}
+      {% comment %}   {%- endif -%} {% endcomment %}
         {{ content_for_layout }}
       </main>
 
@@ -256,7 +261,7 @@
       </script>
       <!-- Calendly Badge-Widget Ende -->
     {%- endif -%}
-  </body>
+  {%- render "ecom_footer"-%}</body>
   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
   <div class="elfsight-app-3ec5a22f-812c-485f-9a76-577aca76c71c"></div>
 </html>

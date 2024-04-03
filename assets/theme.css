@@ -1771,7 +1771,7 @@ input.spr-button-primary[disabled],
 .shopify-payment-button__button--unbranded,
 .spr-summary-actions-newreview,
 .spr-button-primary:not(input) {
-  color: var(--button-text-color);
+  color: var(--button-text-color) !important;
   border-color: var(--button-background);
 }
 
@@ -4396,6 +4396,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   vertical-align: top;
   cursor: pointer;
   background-size: cover;
+  outline: 1px solid black;
 }
 
 .ColorSwatch::after {
@@ -4422,7 +4423,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .ColorSwatch--white {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid black;
   outline-offset: -1px;
 }
 
@@ -8766,6 +8767,10 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     margin-right: 0;
   }
 
+ .Header__MainNav a {
+  font-size: 14px;
+  font-weight: 500;
+}
   .Header--center .Header__FlexItem {
     margin-bottom: 40px;
   }
@@ -11971,3 +11976,27 @@ shopify-payment-terms {
     margin-top: 65px;
   }
 }
+
+/* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
+
+.ProductItem__Vendor a {
+  font-family: 'Sofia-pro', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.CartItem__Title a{
+   font-family: 'Sofia-pro', sans-serif;
+   font-size: 16px;
+   font-weight: 500; 
+}
+.ProductItem__Title a{
+  font-family: 'Sofia-pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.ProductItem__Price {
+    font-size: 14px;
+    font-weight: 400;
+}
+

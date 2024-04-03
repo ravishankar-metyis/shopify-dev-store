@@ -1,1 +1,22 @@
-{"sections":{"main":{"type":"main-not-found","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-not-found",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "hero_video_pkKbGd": {
+      "type": "hero-video",
+      "custom_css": [
+        "video{width:100%;}"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_video_pkKbGd"
+  ]
+}
