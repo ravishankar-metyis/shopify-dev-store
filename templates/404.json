@@ -8,6 +8,9 @@
     },
     "hero_video_pkKbGd": {
       "type": "hero-video",
+      "custom_css": [
+        "video{width:100%;}"
+      ],
       "settings": {
       }
     }
