@@ -84,7 +84,7 @@
           "mega_menu_Y7khHD": {
             "type": "mega_menu",
             "settings": {
-              "navigation_mega_menu": "",
+              "navigation_mega_menu": "Men",
               "push_1_heading": "Example heading",
               "push_1_subheading": "Example sub-heading",
               "push_1_url": "",
