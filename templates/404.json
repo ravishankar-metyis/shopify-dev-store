@@ -1,1 +1,19 @@
-{"sections":{"main":{"type":"main-not-found","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-not-found",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "hero_video_pkKbGd": {
+      "type": "hero-video",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_video_pkKbGd"
+  ]
+}
