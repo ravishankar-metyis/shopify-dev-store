@@ -81,12 +81,12 @@
       "header": {
         "type": "header",
         "blocks": {
-          "20629742-9363-4e6b-a52b-aafecaea0f63": {
+          "mega_menu_Y7khHD": {
             "type": "mega_menu",
             "settings": {
-              "navigation_mega_menu": "Damen",
-              "push_1_heading": "",
-              "push_1_subheading": "",
+              "navigation_mega_menu": "",
+              "push_1_heading": "Example heading",
+              "push_1_subheading": "Example sub-heading",
               "push_1_url": "",
               "push_2_heading": "Example heading",
               "push_2_subheading": "Example sub-heading",
@@ -96,7 +96,7 @@
           "1a38666b-d680-4c97-89e6-f821d855a97a": {
             "type": "mega_menu",
             "settings": {
-              "navigation_mega_menu": "Herren",
+              "navigation_mega_menu": "Women",
               "push_1_heading": "Example heading",
               "push_1_subheading": "Example sub-heading",
               "push_1_url": "",
@@ -107,7 +107,7 @@
           }
         },
         "block_order": [
-          "20629742-9363-4e6b-a52b-aafecaea0f63",
+          "mega_menu_Y7khHD",
           "1a38666b-d680-4c97-89e6-f821d855a97a"
         ],
         "custom_css": [
