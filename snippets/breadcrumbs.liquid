@@ -1,4 +1,4 @@
-{% comment %} {% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
+{% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
 
 <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
 
@@ -82,10 +82,10 @@
 
 </nav>
 
-{% endunless %} {% endcomment %}
+{% endunless %} 
 
 
-{%- style -%}
+{% comment %} {%- style -%}
     .breadcrumbs {
         padding: 1rem 2rem;
         color: {{ settings.breadcrumb_text_color }};
@@ -350,4 +350,4 @@
     const breadCrumbLinks = document.querySelectorAll(".breadcrumbs a")
     const lastLink = breadCrumbLinks[breadCrumbLinks.length - 1]
     lastLink.href = "javascript:void(0)"
-</script>
+</script> {% endcomment %}
