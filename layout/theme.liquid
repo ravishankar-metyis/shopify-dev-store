@@ -220,8 +220,10 @@
       {% section 'header' %}
 
       <main id="main" role="main">
-        {% include 'breadcrumbs' %}
-        {% comment %} {% render "breadcrumbs.liquid" %} {% endcomment %}
+        {% comment %} {% include 'breadcrumbs' %} {% endcomment %}
+        {%- if settings.show_breadcrumb_nav -%}
+          {% render "breadcrumbs.liquid" %}
+        {%- endif -%}
         {{ content_for_layout }}
       </main>
 
