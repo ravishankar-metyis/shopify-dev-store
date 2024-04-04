@@ -219,11 +219,12 @@
       {% section 'announcement' %}
       {% section 'header' %}
 
+      {%- if settings.show_breadcrumb_nav -%}
+        {% render "breadcrumbs.liquid" %}
+      {%- endif -%}
+      
       <main id="main" role="main">
         {% comment %} {% include 'breadcrumbs' %} {% endcomment %}
-        {%- if settings.show_breadcrumb_nav -%}
-          {% render "breadcrumbs.liquid" %}
-        {%- endif -%}
         {{ content_for_layout }}
       </main>
 
