@@ -4422,7 +4422,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
 }
 
 .ColorSwatch--white {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid black;
   outline-offset: -1px;
 }
 
