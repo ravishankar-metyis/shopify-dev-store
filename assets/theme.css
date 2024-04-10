@@ -4396,6 +4396,7 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   vertical-align: top;
   cursor: pointer;
   background-size: cover;
+  outline: 1px solid black;
 }
 
 .ColorSwatch::after {
