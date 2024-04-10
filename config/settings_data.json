@@ -44,6 +44,7 @@
     "social_instagram": "https:\/\/www.instagram.com\/strolz.lech\/",
     "social_linkedin": "https:\/\/www.linkedin.com\/company\/strolz\/",
     "favicon": "shopify:\/\/shop_images\/strolz_logo_guen.jpg",
+    "show_breadcrumb_nav": false,
     "breadcrumb_delimeter": "slash",
     "checkout_header_image": "shopify:\/\/shop_images\/Pic_01.jpg",
     "checkout_logo_image": "shopify:\/\/shop_images\/Strolz_logo_green_3e991d79-dcf5-4f30-9b2e-798c65d38c34.png",
