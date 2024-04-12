@@ -11973,7 +11973,7 @@ shopify-payment-terms {
   }
 }
 
-.Button{
+.shopify-payment-button__button--unbranded {
   background-color: #154E39 !important;
   color: white;
 }
