@@ -1690,7 +1690,8 @@ input.spr-button-primary,
   font-family: var(--heading-font-family);
   font-weight: var(--heading-font-weight);
   font-style: var(--heading-font-style);
-  background-color: transparent;
+  /* background-color: transparent; */
+   background-color: #154E39 !important;
   transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),
     border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: 1;
