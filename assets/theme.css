@@ -11972,3 +11972,7 @@ shopify-payment-terms {
     margin-top: 65px;
   }
 }
+
+.Button, .shopify-payment-button__button--unbranded {
+  background-color: #154E39 !important;
+}
