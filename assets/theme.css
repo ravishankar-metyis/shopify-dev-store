@@ -11973,6 +11973,9 @@ shopify-payment-terms {
   }
 }
 
-.Button--primary:before, .shopify-payment-button__button--unbranded:before, .spr-summary-actions-newreview:before, .spr-button-primary:not(input):before  {
+/* .Button--primary:before, .shopify-payment-button__button--unbranded:before, .spr-summary-actions-newreview:before, .spr-button-primary:not(input):before  {
   background-color: #154E39 !important;
+} */
+.primary-btn-override{
+   background-color: #154E39 !important;
 }
