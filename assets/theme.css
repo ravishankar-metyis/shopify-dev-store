@@ -1779,8 +1779,7 @@ input.spr-button-primary[disabled],
 .shopify-payment-button__button--unbranded::before,
 .spr-summary-actions-newreview::before,
 .spr-button-primary:not(input)::before {
-  /* background-color: var(--button-background); */
-   background-color: #154E39 !important;
+  background-color: var(--button-background);
 }
 
 @media (-moz-touch-enabled: 0), (hover: hover) {
@@ -11974,7 +11973,11 @@ shopify-payment-terms {
   }
 }
 
-/* .Button, .shopify-payment-button__button--unbranded {
+.Button, .shopify-payment-button__button--unbranded {
   background-color: #154E39 !important;
   color: white;
-} */
+  transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+    border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 1;
+  -webkit-tap-highlight-color: initial;
+}
