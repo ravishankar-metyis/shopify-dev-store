@@ -1771,7 +1771,7 @@ input.spr-button-primary[disabled],
 .shopify-payment-button__button--unbranded,
 .spr-summary-actions-newreview,
 .spr-button-primary:not(input) {
-  color: var(--button-text-color);
+  color: var(--button-text-color) !important;
   border-color: var(--button-background);
 }
 
@@ -11973,7 +11973,7 @@ shopify-payment-terms {
   }
 }
 
-.Button, .shopify-payment-button__button--unbranded {
+/* .Button, .shopify-payment-button__button--unbranded {
   background-color: #154E39 !important;
   color: white;
-}
+} */
