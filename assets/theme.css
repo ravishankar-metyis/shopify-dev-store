@@ -1782,10 +1782,6 @@ input.spr-button-primary[disabled],
   background-color: var(--button-background);
 }
 
-.Button--primary::before {
-  background-color: #154e39 !important;
-}
-
 @media (-moz-touch-enabled: 0), (hover: hover) {
   .features--show-button-transition .Button--primary:not([disabled]):hover,
   .features--show-button-transition
