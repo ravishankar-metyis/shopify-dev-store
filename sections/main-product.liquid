@@ -373,7 +373,7 @@
                       </style>
                     {%- endif -%}
 
-                    <button type="submit" class="ProductForm__AddToCart Button Button--secondary Button--full" data-action="add-to-cart">
+                    <button type="submit" class="ProductForm__AddToCart Button Button--primary Button--full" data-action="add-to-cart">
                       {%- if product.selected_or_first_available_variant.available -%}
                         <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
 
