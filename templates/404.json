@@ -1,5 +1,10 @@
 {
   "sections": {
+    "hero_video_AWxHVU": {
+      "type": "hero-video",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-not-found",
       "disabled": true,
@@ -19,6 +24,7 @@
     }
   },
   "order": [
+    "hero_video_AWxHVU",
     "main",
     "text_with_image_j4ejei"
   ]
