@@ -110,9 +110,9 @@
 
     {%- if show_product_info -%}
       <div class="ProductItem__Info {% unless use_horizontal %}ProductItem__Info--{{ settings.product_info_alignment }}{% endunless %}">
-        {%- if show_vendor -%}
+       {% comment %} {%- if show_vendor -%} {% endcomment %}
           <h4 class="ProductItem__Vendor Heading">{{ product.vendor }}</h4>
-        {%- endif -%}
+        {% comment %} {%- endif -%} {% endcomment %}
 
         <p class="ProductItem__Title Heading">
           <a href="{{ product.url }}">{{ product.title }}</a>
