@@ -49,7 +49,7 @@
 
               {%- if product != blank -%}
                 <div class="Carousel__Cell">
-                  {% render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: true %}
+                  {% render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: true, show_color_swatch: section.settings.show_color_swatch, show_labels: true %}
                 </div>
               {%- endif -%}
             {%- endfor -%}
