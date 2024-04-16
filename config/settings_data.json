@@ -116,15 +116,16 @@
         ],
         "settings": {
           "use_sticky_header": true,
-          "logo_max_width": 130,
-          "mobile_logo_max_width": 90,
+          "logo": "shopify:\/\/shop_images\/strolzLogo_green_130x_5f40d9fb-9d7e-4e37-ba31-1310c428a613.webp",
+          "logo_max_width": 135,
+          "mobile_logo_max_width": 105,
           "show_currency_selector": false,
           "show_locale_selector": true,
           "navigation_menu": "",
           "navigation_style": "inline",
           "show_icons": true,
           "enable_transparent_header": true,
-          "enable_transparent_header_collection": false,
+          "enable_transparent_header_collection": true,
           "show_transparent_header_border": true,
           "transparent_text_color": "#ffffff"
         }
