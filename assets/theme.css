@@ -11982,18 +11982,18 @@ shopify-payment-terms {
 /* .Heading {
     font-family: 'Sofia-pro', sans-serif;
 } */
-.ProductItem__Vendor .Heading a {
+.ProductItem__Vendor a {
   font-family: 'Sofia-pro', sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
 
-.CartItem__Title .Heading a{
+.CartItem__Title a{
        font-family: 'Sofia-pro', sans-serif;
    font-size: 16px;
    font-weight: 500; 
 }
-.ProductItem__Title .Heading a{
+.ProductItem__Title a{
       font-family: 'Sofia-pro', sans-serif;
   font-size: 14px;
   font-weight: 500;
