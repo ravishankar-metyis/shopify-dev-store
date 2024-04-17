@@ -158,7 +158,7 @@
                     {%- endif -%}
 
                     <input class="ColorSwatch__Radio" type="radio" name="{{ color_name }}" id="{{ color_id }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked="checked"{% endif %} data-product-handle="{{ product.handle }}" data-variant-id="{{ variant_for_value.id }}" data-variant-url="{{ variant_for_value.url }}{% if variant_for_value.image %}#Image{{ variant_for_value.image.id }}{% endif %}" {% if variant_for_value.image %}data-image-id="{{ variant_for_value.image.id }}" data-image-url="{{ variant_image_url }}" data-image-widths="[{{ supported_sizes }}]" data-image-aspect-ratio="{{ variant_for_value.image.aspect_ratio }}"{% endif %} aria-hidden="true">
-                    <label class="ColorSwatch ColorSwatch--small {% if downcased_value == 'white' %}ColorSwatch--white{% endif %}" for="{{ color_id }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: true %}" title="{{ value | escape }}" data-tooltip="{{ value | escape }}"></label>
+                    <label class="ColorSwatch ColorSwatch--small {% if downcased_value == 'white' %}ColorSwatch--white{% endif %}" for="{{ color_id }}" style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: value %}" title="{{ value | escape }}" data-tooltip="{{ value | escape }}"></label>
                   </div>
                 {%- endfor -%}
               {%- endif -%}
