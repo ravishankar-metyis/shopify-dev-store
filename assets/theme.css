@@ -7657,12 +7657,6 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   font: var(--text-body);
 }
 
-/* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
-.ProductItem__Vendor .Heading, .CartItem__Title .Heading, .ProductItem__Title .Heading {
-  font-family: 'Sofia Pro',sans-serif;
-}
-
-
 .ProductItem__ColorSwatchList {
   margin-top: 15px;
 }
@@ -11983,10 +11977,8 @@ shopify-payment-terms {
   }
 }
 
-/* .Button--primary:before, .shopify-payment-button__button--unbranded:before, .spr-summary-actions-newreview:before, .spr-button-primary:not(input):before  {
-  background-color: #154E39 ;
-} */
-/* .primary-btn-override{
-   background-color: #154E39 !important;
-  color: white;
-} */
+/* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
+.ProductItem__Vendor .Heading, .CartItem__Title .Heading, .ProductItem__Title .Heading {
+  font-family: 'Sofia Pro',sans-serif;
+}
+
