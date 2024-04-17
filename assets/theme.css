@@ -11979,6 +11979,6 @@ shopify-payment-terms {
 
 /* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
 .ProductItem__Vendor .Heading a, .CartItem__Title .Heading a, .ProductItem__Title .Heading a {
-  font-family: 'Sofia Pro',sans-serif;
+  font-family: 'Sofia Pro', sans-serif;
 }
 
