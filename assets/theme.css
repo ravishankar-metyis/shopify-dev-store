@@ -11980,7 +11980,7 @@ shopify-payment-terms {
 /* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
 
 .Heading {
-    font-family: 'Sofia Pro', sans-serif;
+    font-family: 'Sofia-pro', sans-serif;
 }
 .ProductItem__Vendor .Heading a {
   font-size: 16px;
@@ -11988,12 +11988,10 @@ shopify-payment-terms {
 }
 
 .CartItem__Title .Heading a{
-   font-family: 'Sofia Pro', sans-serif;
    font-size: 16px;
    font-weight: 500; 
 }
 .ProductItem__Title .Heading a {
-  font-family: 'Sofia Pro', sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
