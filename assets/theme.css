@@ -7657,6 +7657,12 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
   font: var(--text-body);
 }
 
+/* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
+ProductItem__Vendor Heading, CartItem__Title Heading, ProductItem__Title Heading {
+  font-family: Sofia-pro;
+}
+
+
 .ProductItem__ColorSwatchList {
   margin-top: 15px;
 }
