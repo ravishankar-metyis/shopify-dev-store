@@ -11979,9 +11979,6 @@ shopify-payment-terms {
 
 /* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
 
-/* .Heading {
-    font-family: 'Sofia-pro', sans-serif;
-} */
 .ProductItem__Vendor a {
   font-family: 'Sofia-pro', sans-serif;
   font-size: 16px;
@@ -11989,13 +11986,17 @@ shopify-payment-terms {
 }
 
 .CartItem__Title a{
-       font-family: 'Sofia-pro', sans-serif;
+   font-family: 'Sofia-pro', sans-serif;
    font-size: 16px;
    font-weight: 500; 
 }
 .ProductItem__Title a{
-      font-family: 'Sofia-pro', sans-serif;
+  font-family: 'Sofia-pro', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+}
+.ProductItem__Price .Price {
+    font-size: 14px;
+    font-weight: 400;
 }
 
