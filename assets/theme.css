@@ -8767,6 +8767,10 @@ body:not(.features--show-image-zooming) .Image--lazyLoaded.Image--zoomOut {
     margin-right: 0;
   }
 
+ .Header__MainNav a {
+  font-size: 14px;
+  font-weight: 500;
+}
   .Header--center .Header__FlexItem {
     margin-bottom: 40px;
   }
