@@ -12004,9 +12004,9 @@ shopify-payment-terms {
     font-weight: 400;
 }
 
-/* .SearchResult{
-  font-size: 14px;
-} */
+ .SearchResult{
+  font-size: 14px !important;
+} 
 
 #shopify-section-header .Heading{
   font-size: 14px !important
