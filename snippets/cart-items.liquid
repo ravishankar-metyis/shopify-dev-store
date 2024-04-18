@@ -30,9 +30,9 @@
         <h2 class="CartItem__Vendor">  
          <a> {{ line_item.product.vendor }} </a>
         </h2>
-        <h2 class="CartItem__Title Heading">
+        <span class="CartItem__Title Heading">
           <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
-        </h2>
+        </span>
 
         <div class="CartItem__Meta Heading Text--subdued">
           {%- unless line_item.product.has_only_default_variant -%}
