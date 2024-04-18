@@ -11972,6 +11972,10 @@ shopify-payment-terms {
   }
 }
 
+.Header__MainNav a {
+  font-size: 14px;
+  font-weight: 500;
+}
 /* Following figma Design for ProductItem__Vendor ProductItem__Title & CartItem__Title */
 
 .ProductItem__Vendor a {
