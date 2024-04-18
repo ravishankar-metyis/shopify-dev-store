@@ -11982,7 +11982,7 @@ shopify-payment-terms {
 
 .ProductItem__Info .ProductItem__Vendor {
   font-family: 'Sofia-pro', sans-serif;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 500;
 } 
 
@@ -12006,9 +12006,9 @@ shopify-payment-terms {
     font-weight: 400;
 }
 
- .SearchResult{
+ /* .SearchResult{
   font-size: 14px !important;
-} 
+}  */
 
 #shopify-section-header .Heading{
   font-size: 14px !important
