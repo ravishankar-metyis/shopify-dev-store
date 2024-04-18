@@ -11972,6 +11972,7 @@ shopify-payment-terms {
   }
 }
 
+/*Font size and font weight changed for Navbar Header items*/
 .Header__MainNav a {
   font-size: 14px;
   font-weight: 500;
