@@ -12000,6 +12000,7 @@ shopify-payment-terms {
     font-weight: 400;
 }
 
+/* to set font size as 14px in Search Results Page Product Vendor name */
 #shopify-section-header .Heading{
   font-size: 14px !important;
 }
