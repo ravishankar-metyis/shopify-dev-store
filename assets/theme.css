@@ -11977,17 +11977,17 @@ shopify-payment-terms {
 .ProductItem__Vendor a {
   font-family: 'Sofia-pro', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
-.ProductItem__Vendor h4 {
+/* .ProductItem__Vendor h4 {
   font-family: 'Sofia-pro', sans-serif;
   font-size: 14px;
   font-weight: 500;
-}
+} */
 .CartItem__Title a{
    font-family: 'Sofia-pro', sans-serif;
    font-size: 16px;
-   font-weight: 500; 
+   font-weight: 400; 
 }
 .CartItem__Vendor a{
    font-family: 'Sofia-pro', sans-serif;
@@ -11996,10 +11996,10 @@ shopify-payment-terms {
 }
 .ProductItem__Title a{
   font-family: 'Sofia-pro', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 .ProductItem__Price {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 }
