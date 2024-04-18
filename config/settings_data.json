@@ -124,7 +124,7 @@
           "show_icons": true,
           "enable_transparent_header": true,
           "enable_transparent_header_collection": true,
-          "show_transparent_header_border": false,
+          "show_transparent_header_border": true,
           "transparent_text_color": "#ffffff"
         }
       },
