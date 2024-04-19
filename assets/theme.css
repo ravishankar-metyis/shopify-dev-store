@@ -11978,6 +11978,10 @@ shopify-payment-terms {
   font-weight: 500;
 }
 
+.Navbar_L1{
+  transition: all 0.3s ease;
+}
+
 .Navbar_L1:hover {
   font-weight: 700;
   color: #154E39;
