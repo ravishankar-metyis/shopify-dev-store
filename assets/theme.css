@@ -12009,3 +12009,7 @@ shopify-payment-terms {
 #shopify-section-header .Heading{
   font-size: 14px !important;
 }
+
+.ProductItem__Title a{
+  font-size: 14px !important;
+}
