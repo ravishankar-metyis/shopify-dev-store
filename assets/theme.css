@@ -12000,3 +12000,11 @@ shopify-payment-terms {
     font-weight: 400;
 }
 
+/*Navbar arrows */
+.Collapsible_Expand {
+  position: absolute;
+  right: 0;
+  top: calc(50% - (11px / 2));
+  width: 11px;
+  height: 11px;
+}
