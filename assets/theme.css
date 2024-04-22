@@ -12008,3 +12008,9 @@ shopify-payment-terms {
   width: 11px;
   height: 11px;
 }
+
+.SidebarMenu .Heading, .supports-hover .SidebarMenu .Link--primary:hover{
+     font-size: 14px;
+    font-weight: 500; 
+}
+
