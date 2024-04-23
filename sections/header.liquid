@@ -11,7 +11,7 @@
 
 {%- assign use_transparent_header = false -%}
 
-{%- if template == 'index' and section.settings.enable_transparent_header -%}
+{%- if template.name == 'index' and section.settings.enable_transparent_header -%}
   {%- assign use_transparent_header = true -%}
 {%- endif -%}
 
