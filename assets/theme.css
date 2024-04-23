@@ -12014,3 +12014,7 @@ shopify-payment-terms {
     font-weight: 500; 
 }
 
+/*collection sort button popover spacing */
+#sort_collection{
+  line-height: 16px;
+}
