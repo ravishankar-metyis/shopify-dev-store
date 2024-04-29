@@ -1,0 +1,56 @@
+<section class="Section Section--spacingNormal" id="section-{{ section.id }}">
+  <div class="Container">
+    {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+      <header class="SectionHeader SectionHeader--center">
+        {%- if section.settings.subheading != blank -%}
+          <h3 class="SectionHeader__SubHeading Heading u-h6">{{ section.settings.subheading | escape }}</h3>
+        {%- endif -%}
+
+        {%- if section.settings.title != blank -%}
+          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    <div class="Brands">
+      <ul>
+        {% assign current = '' %}
+        {% for product_vendor in shop.vendors %}
+          {% assign first_letter = product_vendor | strip_html | upcase | truncate: 1, '' %}
+          {% unless first_letter == current %}
+            <li class="vendor-letter">{{ first_letter }}</li>
+          {% endunless %}
+          <li>{{ product_vendor | link_to_vendor }}</li>
+          {% assign current = first_letter %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "brands-list",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "Sub-heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Our Brands"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Brands List",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

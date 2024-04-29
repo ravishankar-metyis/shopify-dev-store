@@ -1,0 +1,66 @@
+<section
+  id="section-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="locations-list"
+  style="text-align: center;"
+>
+  <h3 class="LocationList__Title">Our Locations in the Alberg</h3>
+    <div
+      class="locations-container {% if section.settings.add_spacing %}LocationList--spaced{% endif %}"
+      data-flickity-config="{{ flickity_options }}"
+    >
+      <a class="location" href="https://www.strolz.at/de/shops/sport-und-mode/sporthaus-strolz" target="_blank">
+        <img src="https://cdn.shopify.com/s/files/1/0600/8527/2828/files/Sporthaus-Store.png?v=1699971419">
+      </a>
+      <a class="location" href="https://www.strolz.at/de/shops/sport-und-verleih/skiservice-strolz" target="_blank">
+        <img src="https://cdn.shopify.com/s/files/1/0600/8527/2828/files/Skiservice-Store.png?v=1701076718">
+      </a>
+      <a class="location" href="https://www.strolz.at/de/shops/sport-und-verleih/filomena-strolz" target="_blank">
+        <img src="https://cdn.shopify.com/s/files/1/0600/8527/2828/files/Filomena-Stores.png?v=1699971419">
+      </a>
+      <a class="location" href="https://www.strolz.at/de/shops/sport-und-verleih/sporthaus-strolz-zuers" target="_blank">
+        <img src="https://cdn.shopify.com/s/files/1/0600/8527/2828/files/Zurs-Store.png?v=1699971419">
+      </a>
+    </div>
+</section>
+
+<style>
+      .locations-container {
+      display: flex;
+      overflow-x: auto; /* Enable horizontal scroll for mobile */
+      margin: 0 32px; /* Compensate for negative margins on the images */
+    }
+
+    .location {
+      flex: 0 0 calc(25% - 16px); /* Four images in a row for desktop */
+      max-width: calc(25% - 16px);
+      margin: 0 8px; /* Adjust spacing between images */
+      box-sizing: border-box;
+    }
+     @media (max-width: 767px) {
+      .location {
+        flex: 0 0 calc(50% - 16px); /* Two images in a row for mobile */
+        max-width: calc(50% - 16px);
+      }
+      .locations-container{ margin: 0 0 0 24px}
+    }
+</style>
+{% schema %}
+{
+  "name": "Locations list",
+  "settings": [],
+    "presets": [
+  {
+    "category": "Location",
+    "name": "Locations list",
+    "settings": {}
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

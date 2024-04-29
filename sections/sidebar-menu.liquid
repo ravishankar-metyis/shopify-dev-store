@@ -1,0 +1,238 @@
+{%- assign main_menu_handle = section.settings.primary_menu | default: 'main-menu' -%}
+{%- assign main_menu = linklists[main_menu_handle] -%}
+
+{%- if section.settings.show_currency_selector and shop.enabled_currencies.size > 1 -%}
+  {%- assign currency_selector = true -%}
+{%- endif -%}
+
+{%- if section.settings.show_locale_selector and shop.published_locales.size > 1 -%}
+  {%- assign locale_selector = true -%}
+{%- endif -%}
+
+{%- if locale_selector or currency_selector -%}
+  {%- capture localization_form -%}
+    {%- form 'localization', id: 'localization_form_header', class: 'Drawer__Selectors' -%}
+      <div class="HorizontalList HorizontalList--spacingLoose">
+        {%- if currency_selector -%}
+          <div class="HorizontalList__Item">
+            <input type="hidden" name="currency_code" value="{{ form.current_currency.iso_code }}">
+            <span class="u-visually-hidden">{{ 'header.general.currency' | t }}</span>
+
+            <button type="button" class="SelectButton Link Link--primary u-h8" aria-haspopup="true" aria-expanded="false" aria-controls="header-currency-popover">
+              {{ form.current_currency.iso_code }} {% if form.current_currency.symbol %}{{ form.current_currency.symbol }}{% endif %}
+              {%- render 'icon', icon: 'select-arrow' -%}
+            </button>
+          </div>
+        {%- endif -%}
+
+        {%- if locale_selector -%}
+          <div class="HorizontalList__Item">
+            <input type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
+            <span class="u-visually-hidden">{{ 'header.general.locale' | t }}</span>
+
+            <button type="button" class="SelectButton Link Link--primary u-h8" aria-haspopup="true" aria-expanded="false" aria-controls="header-locale-popover" data-action="close-drawer" data-drawer-id="sidebar-menu">
+              {{- form.current_locale.endonym_name -}}
+              {%- render 'icon', icon: 'select-arrow' -%}
+            </button>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endform -%}
+  {%- endcapture -%}
+{%- endif -%}
+
+<section
+  id="sidebar-menu"
+  class="SidebarMenu Drawer Drawer--small Drawer--fromLeft"
+  aria-hidden="true"
+  data-section-id="{{ section.id }}"
+  data-section-type="sidebar-menu"
+>
+  <header class="Drawer__Header" data-drawer-animated-left>
+    <button
+      class="Drawer__Close Icon-Wrapper--clickable"
+      data-action="close-drawer"
+      data-drawer-id="sidebar-menu"
+      aria-label="{{ 'header.navigation.close_sidebar' | t }}"
+    >
+      <!-- {%- render 'icon' with 'close' -%} -->
+      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1L1 6.997L7 13" stroke="#222222" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <div class="Drawer__Content">
+    <div class="Drawer__Main" data-drawer-animated-left data-scrollable>
+      <div class="Drawer__Container">
+        <nav
+          class="SidebarMenu__Nav SidebarMenu__Nav--primary"
+          aria-label="{{ 'header.navigation.sidebar_title' | t }}"
+        >
+          {%- for link in main_menu.links -%}
+            <div class="Collapsible">
+              {%- if link.links != blank -%}
+                <button
+                  class="Collapsible__Button Heading u-h6"
+                  data-action="toggle-collapsible"
+                  {% if link.links != blank %}
+                    aria-expanded="false"
+                  {% endif %}
+                >
+                  {{- link.title | escape -}}
+                  <!-- <span class="Collapsible__Plus"></span> -->
+                  <span class="Collapsible_Expand">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 13L7 7.003L1 1" stroke="#222222" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="Collapsible__Inner">
+                  <div class="Collapsible__Content">
+                    {%- for sub_link in link.links -%}
+                      <div class="Collapsible">
+                        {%- if sub_link.links != blank -%}
+                          <button
+                            class="Collapsible__Button Heading Text--subdued Link--primary u-h7"
+                            data-action="toggle-collapsible"
+                            {% if sub_link.links != blank %}
+                              aria-expanded="false"
+                            {% endif %}
+                          >
+                            {{- sub_link.title | escape -}}
+                            <!-- <span class="Collapsible__Plus"></span> -->
+                            <span class="Collapsible_Expand">
+                              <svg
+                                width="8"
+                                height="14"
+                                viewBox="0 0 8 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M1 13L7 7.003L1 1" stroke="#222222" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <div class="Collapsible__Inner">
+                            <div class="Collapsible__Content">
+                              <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
+                                {%- for sub_sub_link in sub_link.links -%}
+                                  <li class="Linklist__Item">
+                                    <a href="{{ sub_sub_link.url }}" class="Text--subdued Link Link--primary">
+                                      {{- sub_sub_link.title | escape -}}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                          </div>
+                        {%- else -%}
+                          <a
+                            href="{{ sub_link.url }}"
+                            class="Collapsible__Button Heading Text--subdued Link Link--primary u-h7"
+                          >
+                            {{- sub_link.title | escape -}}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              {%- else -%}
+                <a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary u-h6">
+                  {{- link.title | escape -}}
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </nav>
+
+        {%- assign secondary_menu = linklists[section.settings.secondary_menu] -%}
+
+        <nav class="SidebarMenu__Nav SidebarMenu__Nav--secondary">
+          <ul class="Linklist Linklist--spacingLoose">
+            {%- for link in secondary_menu.links -%}
+              <li class="Linklist__Item">
+                <a href="{{ link.url }}" class="Text--subdued Link Link--primary">{{ link.title | escape }}</a>
+              </li>
+            {%- endfor -%}
+
+            {%- comment -%}We automatically add some links to the secondary menu{%- endcomment -%}
+
+            {%- if shop.customer_accounts_enabled -%}
+              <li class="Linklist__Item">
+                <a href="{{ routes.account_url }}" class="Text--subdued Link Link--primary">
+                  {{- 'header.navigation.account' | t -}}
+                </a>
+              </li>
+            {%- endif -%}
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    {%- if section.settings.show_social_media -%}
+      {%- capture social_media -%}
+          {% render 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
+        {%- endcapture -%}
+    {%- endif -%}
+
+    {%- if social_media != blank -%}
+      <aside class="Drawer__Footer" data-drawer-animated-bottom>
+        {%- if social_media != blank -%}
+          {{ social_media }}
+        {%- endif -%}
+      </aside>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sidebar menu",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Currency selector",
+      "info": "To add a currency, go to your [payment settings.](/admin/settings/payments)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "Show currency selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "primary_menu",
+      "label": "Primary menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary menu",
+      "info": "This menu won't show dropdown items."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
